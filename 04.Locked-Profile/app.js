@@ -31,14 +31,15 @@ function lockedProfile() {
                     if(radioUnlckEl.checked && this.textContent === 'Show more'){
                         this.textContent = 'Hide It';
                         userElement.setAttribute('style', 'display:block');
-                        console.log('ok');
-                    }else{
+                    }else if(radioUnlckEl.checked && this.textContent === 'Hide It'){
                         this.textContent = 'Show more';
                         userElement.setAttribute('style', 'display:none');
-
-                        console.log('not ok');
+                    }else{
+                        return;
                     }
                 })
+
+                
             })
         })
 
